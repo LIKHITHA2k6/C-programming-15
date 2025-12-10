@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float x_mean, mu, s;
+    int n;
+    float t_value;
+
+    printf("Enter sample mean (x̄): ");
+    scanf("%f", &x_mean);
+
+    printf("Enter population mean (μ): ");
+    scanf("%f", &mu);
+
+    printf("Enter sample standard deviation (s): ");
+    scanf("%f", &s);
+
+    printf("Enter sample size (n): ");
+    scanf("%d", &n);
+
+    // t-distribution formula
+    t_value = (x_mean - mu) / (s / sqrt(n));
+
+    printf("\nCalculated t-value = %.4f\n", t_value);
+    printf("Degrees of freedom (df) = %d\n", n - 1);
+
+    return 0;
+}
